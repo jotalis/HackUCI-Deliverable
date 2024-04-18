@@ -33,7 +33,16 @@ function App() {
 			</form>
 
 			<h2>Previous Quotes</h2>
-			{/* TODO: Display the actual quotes from the database */}
+			<div className="messages">
+				{quotes.map(quote => (
+					<div>
+						<p>{quote.name}</p>
+						<p>{quote.message}</p>
+						<p>{quote.time}</p>
+					</div>
+					
+				))}
+			</div>
 			<select id="input-age" selected="all" name="age filter" value={ageFilter} onChange={ageFilterChange}>
 				<option value="all">All</option>
 				<option value="day">1 day</option>
@@ -41,11 +50,6 @@ function App() {
 				<option value="month">1 month</option>
 				<option value="year">1 year</option>
 			</select>
-			<div className="messages">
-				<p>Peter Anteater</p>
-				<p>Zot Zot Zot!</p>
-				<p>Every day</p>
-			</div>
 		</div>
 	);
 }

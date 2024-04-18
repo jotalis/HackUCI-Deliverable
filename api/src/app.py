@@ -56,10 +56,10 @@ def retrieve_message(max_age: str) -> list[Quote]:
     now = datetime.now().replace(microsecond=0)
     quotes = []
     print(max_age)
-    # for quote in database["quotes"]:
-    #     quote_time = datetime.fromisoformat(quote['time'])
+    for quote in database["quotes"]:
+        quote_time = datetime.fromisoformat(quote['time'])
         
         #if (now - quote_time).total_seconds() <= max_age:
-        #    quotes.append(quote)
+        quotes.append(quote)
     return quotes
 
