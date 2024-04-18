@@ -10,7 +10,7 @@
 
 .quote-table-filter {
     margin-bottom: 20px;
-    padding: 0.5em 1em; 
+    padding: 0.75em 1em; 
     border: 1px solid #ddd; 
     border-radius: 5px; 
     cursor: pointer;  
@@ -18,11 +18,16 @@
     appearance: none;  
     background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-    padding-right: 1em;
+    padding-right: 2em;
     background-image: url('../../assets/dropdown_arrow.png');
     background-position: right 10px center;
     background-repeat: no-repeat;
     background-size: 12px; 
+}
+
+
+.filter-label {
+    margin-right: 0.5em;
 }
 
 table {

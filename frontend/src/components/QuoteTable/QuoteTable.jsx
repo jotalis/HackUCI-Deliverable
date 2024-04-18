@@ -22,10 +22,11 @@ function QuoteTable({quotes, setQuotes}) {
         const options = { year: 'numeric', month: '2-digit', day: '2-digit'};
         return new Date(dateString).toLocaleDateString(undefined, options);
     };
-    
+
     return (
         <div className="quote-table-container">
             <h1 className="quote-table-title">Recent Quotes</h1>   
+            <label htmlFor="input-age" className = "filter-label">Filter: </label>
             <select id="input-age" className="quote-table-filter" selected="all" name="age filter" value={ageFilter} onChange={ageFilterChange}>
                 <option value="all">All</option>
                 <option value="day">1 day</option>
