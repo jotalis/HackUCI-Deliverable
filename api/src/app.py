@@ -5,6 +5,7 @@ from fastapi import FastAPI, Form, status
 from fastapi.responses import RedirectResponse
 
 from services.database import JSONDatabase
+import json
 
 app = FastAPI()
 
@@ -43,8 +44,7 @@ def post_message(name: str = Form(), message: str = Form()) -> RedirectResponse:
     quote = Quote(name=name, message=message, time=now.isoformat())
     database["quotes"].append(quote)
 
-    # You may modify the return value as needed to support other functionality
-    return RedirectResponse("/", status.HTTP_303_SEE_OTHER)
+    return json.dumps(quote)
 
 
 # TODO: add another API route with a query parameter to retrieve quotes based on max age

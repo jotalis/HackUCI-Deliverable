@@ -25,7 +25,6 @@ function QuoteTable({quotes, setQuotes}) {
 
     return (
         <div className="quote-table-container">
-            <h1 className="quote-table-title">Recent Quotes</h1>   
             <label htmlFor="input-age" className = "filter-label">Filter: </label>
             <select id="input-age" className="quote-table-filter" selected="all" name="age filter" value={ageFilter} onChange={ageFilterChange}>
                 <option value="all">All</option>
@@ -35,24 +34,24 @@ function QuoteTable({quotes, setQuotes}) {
                 <option value="year">1 year</option>
             </select> 
                 <div className="table-scroll">
-                <table className="quote-table ">
-                    <thead>
-                        <tr>
-                            <th className='quote-table-column-title'>Quote</th>
-                            <th className='quote-table-column-title'>Name</th>
-                            <th className='quote-table-column-title'>Date</th>
-                        </tr>
-                    </thead>
-                            <tbody>     
-                                {quotes.map((quote, index) => (
-                                    <tr className="quote-table-row-data" key={index}>
-                                        <td>"{quote.message}"</td>
-                                        <td>{quote.name}</td>
-                                        <td>{formatDate(quote.time)}</td>
-                                    </tr>
-                                ))}
-                            </tbody>   
-                </table>
+                    <table className="quote-table ">
+                        <thead>
+                            <tr>
+                                <th className='quote-table-column-title'>Quote</th>
+                                <th className='quote-table-column-title'>Name</th>
+                                <th className='quote-table-column-title'>Date</th>
+                            </tr>
+                        </thead>
+                                <tbody>     
+                                    {quotes.map((quote, index) => (
+                                        <tr className="quote-table-row-data" key={index}>
+                                            <td>"{quote.message}"</td>
+                                            <td>{quote.name}</td>
+                                            <td>{formatDate(quote.time)}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>   
+                    </table>
                 </div>
         </div>
     );
