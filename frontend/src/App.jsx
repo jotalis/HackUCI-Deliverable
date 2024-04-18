@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import QuoteTable from "./components/QuoteTable/QuoteTable";
+import logo from "./assets/quotebook.png";
 
 function App() {
 	
@@ -8,8 +9,11 @@ function App() {
 
 	return (
 		<div className="App">
-			{/* TODO: include an icon for the quote book */}
-			<h1>Hack at UCI Tech Deliverable</h1>
+			<header className="header">
+				<img src={logo} className="logo" alt="logo" />
+				<h1>Hack at UCI Tech Deliverable</h1>
+			</header>
+
 
 			<h2>Submit a quote</h2>
 			{/* TODO: implement custom form submission logic to not refresh the page */}
