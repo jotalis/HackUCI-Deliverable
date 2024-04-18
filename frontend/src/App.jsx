@@ -18,6 +18,13 @@ function App() {
 
 			<h2>Previous Quotes</h2>
 			{/* TODO: Display the actual quotes from the database */}
+			<select id="input-age" name="age filter">
+				<option value="all">All</option>
+				<option value="day">1 day</option>
+				<option value="week">1 week</option>
+				<option value="month">1 month</option>
+				<option value="year">1 year</option>
+			</select>
 			<div className="messages">
 				<p>Peter Anteater</p>
 				<p>Zot Zot Zot!</p>
