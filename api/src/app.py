@@ -55,11 +55,25 @@ def retrieve_message(max_age: str) -> list[Quote]:
     """
     now = datetime.now().replace(microsecond=0)
     quotes = []
-    print(max_age)
+   
+    if max_age == "all":
+        return database["quotes"]
+    
+    max_seconds = 0
+    if max_age == "day":
+        max_seconds = 86400
+    elif max_age == "week":
+        max_seconds = 604800
+    elif max_age == "month":
+        max_seconds = 2592000
+    elif max_age == "year":
+        max_seconds = 31536000
+    
+    # Select only the quotes that are within the max_age
     for quote in database["quotes"]:
         quote_time = datetime.fromisoformat(quote['time'])
-        
-        #if (now - quote_time).total_seconds() <= max_age:
-        quotes.append(quote)
+        if (now - quote_time).total_seconds() <= max_seconds:
+            quotes.append(quote)
+            
     return quotes
 
