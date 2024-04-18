@@ -2,3 +2,37 @@
     margin: 0;
     padding: 0;
 }
+
+.card-container {
+    display: flex; 
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px; 
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #d1d0d0;
+    box-sizing: border-box;
+}
+
+.card:first-child {
+    margin-right: 10px;
+}
+
+.card:last-child {
+    margin-left: 10px;
+}
+
+.submit-quote-card {
+    flex: 1;
+    max-width: 33.3333%; 
+}
+
+.quote-card {
+    flex: 2;
+    max-width: 66.6666%; 
+}
+

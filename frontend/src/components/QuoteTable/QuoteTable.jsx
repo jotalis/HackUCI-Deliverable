@@ -34,24 +34,26 @@ function QuoteTable({quotes, setQuotes}) {
                 <option value="month">1 month</option>
                 <option value="year">1 year</option>
             </select> 
-            <table className="quote-table">
-                <thead>
-                    <tr>
-                        <th className='quote-table-column-title'>Quote</th>
-                        <th className='quote-table-column-title'>Name</th>
-                        <th className='quote-table-column-title'>Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {quotes.map((quote, index) => (
-                        <tr className="quote-table-row-data" key={index}>
-                            <td>"{quote.message}"</td>
-                            <td>{quote.name}</td>
-                            <td>{formatDate(quote.time)}</td>
+                <div className="table-scroll">
+                <table className="quote-table ">
+                    <thead>
+                        <tr>
+                            <th className='quote-table-column-title'>Quote</th>
+                            <th className='quote-table-column-title'>Name</th>
+                            <th className='quote-table-column-title'>Date</th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
+                    </thead>
+                            <tbody>     
+                                {quotes.map((quote, index) => (
+                                    <tr className="quote-table-row-data" key={index}>
+                                        <td>"{quote.message}"</td>
+                                        <td>{quote.name}</td>
+                                        <td>{formatDate(quote.time)}</td>
+                                    </tr>
+                                ))}
+                            </tbody>   
+                </table>
+                </div>
         </div>
     );
 }
