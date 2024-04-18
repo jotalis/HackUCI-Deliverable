@@ -4,13 +4,18 @@ import "./App.css";
 function App() {
 	
 	const [ageFilter, setAgeFilter] = useState("all");
+	const [quotes, setQuotes] = useState([]);
 
 	const ageFilterChange = (event) => {
 		console.log(event.target.value);
 		setAgeFilter(event.target.value);
 	}
 
-
+	useEffect(() => {
+		fetch(`/api/retrieve?max_age=${ageFilter}`)
+		.then(response => response.json())
+		.then(data => setQuotes(data))
+	}, [ageFilter]);
 
 	return (
 		<div className="App">
