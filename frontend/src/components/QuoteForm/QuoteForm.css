@@ -1,0 +1,42 @@
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: #1a1a1a;
+    border: none;
+    border-radius: 0.35rem;
+    cursor: pointer;
+    margin-top: 20px
+}
+  
+.submit-btn:hover {
+    background-color: #333;
+}
+
+.quote-submission-title {
+    font-weight: normal;
+    color: #6f6e6e;
+}
+
+.quote-submission-box {
+    margin-top: 15px;
+}
+
+.quote-submission-group{
+    display: block;
+    width: 95%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0.35rem;
+  }

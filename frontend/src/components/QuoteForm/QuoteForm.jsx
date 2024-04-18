@@ -1,3 +1,5 @@
+import './QuoteForm.css';
+
 function QuoteForm({quotes, setQuotes}) {
     const handleSubmit = async (event) => {
 
@@ -28,15 +30,17 @@ function QuoteForm({quotes, setQuotes}) {
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="input-name">Name</label>
-                <input type="text" name="name" id="input-name" required />
-                <label htmlFor="input-message">Quote</label>
-                <input type="text" name="message" id="input-message" required />
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+        <form onSubmit={handleSubmit}>
+            <div className="quote-submission-box">
+                <label className="quote-submission-title" htmlFor="input-message">Quote</label>
+                <input className="quote-submission-group" type="text" name="message" id="input-message" placeholder="Enter your quote" required />
+            </div>
+            <div className="quote-submission-box">
+                <label className="quote-submission-title" htmlFor="input-name">Name</label>
+                <input className="quote-submission-group" type="text" name="name" id="input-name" placeholder="Enter quotee name" required />
+            </div>
+            <button type="submit" className="submit-btn">Submit</button>
+        </form>
     )
 }
 
