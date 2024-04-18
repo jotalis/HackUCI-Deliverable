@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+import QuoteTable from "./components/QuoteTable/QuoteTable";
 
 function App() {
 	
@@ -50,6 +51,7 @@ function App() {
 				<option value="month">1 month</option>
 				<option value="year">1 year</option>
 			</select>
+			<QuoteTable quotes={quotes} />
 		</div>
 	);
 }
