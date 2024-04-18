@@ -32,18 +32,6 @@ function App() {
 				<input type="text" name="message" id="input-message" required />
 				<button type="submit">Submit</button>
 			</form>
-
-			<h2>Previous Quotes</h2>
-			<div className="messages">
-				{quotes.map(quote => (
-					<div>
-						<p>{quote.name}</p>
-						<p>{quote.message}</p>
-						<p>{quote.time}</p>
-					</div>
-					
-				))}
-			</div>
 			<select id="input-age" selected="all" name="age filter" value={ageFilter} onChange={ageFilterChange}>
 				<option value="all">All</option>
 				<option value="day">1 day</option>

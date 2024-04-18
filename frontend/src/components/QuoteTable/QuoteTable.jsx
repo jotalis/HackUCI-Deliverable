@@ -1,4 +1,5 @@
 import React from 'react';
+import './QuoteTable.css';
 
 function QuoteTable({quotes}) {
 
@@ -8,9 +9,9 @@ function QuoteTable({quotes}) {
         return new Date(dateString).toLocaleDateString(undefined, options);
     };
     return (
-        <div className="App">
-            <h1>Recent Quotes</h1>    
-            <table>
+        <div className="quote-table-container">
+            <h1 className="quote-table-title">Recent Quotes</h1>    
+            <table className="quote-table">
                 <thead>
                     <tr>
                         <th>Quote</th>
@@ -23,7 +24,7 @@ function QuoteTable({quotes}) {
                         <tr key={index}>
                             <td>"{quote.message}"</td>
                             <td>{quote.name}</td>
-                            <td>{formatDate(quote.date)}</td>
+                            <td>{formatDate(quote.time)}</td>
                         </tr>
                     ))}
                 </tbody>
