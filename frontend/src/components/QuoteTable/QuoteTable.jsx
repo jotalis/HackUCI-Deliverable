@@ -37,14 +37,14 @@ function QuoteTable({quotes, setQuotes}) {
             <table className="quote-table">
                 <thead>
                     <tr>
-                        <th>Quote</th>
-                        <th>Author</th>
-                        <th>Date</th>
+                        <th className='quote-table-column-title'>Quote</th>
+                        <th className='quote-table-column-title'>Name</th>
+                        <th className='quote-table-column-title'>Date</th>
                     </tr>
                 </thead>
                 <tbody>
                     {quotes.map((quote, index) => (
-                        <tr key={index}>
+                        <tr className="quote-table-row-data" key={index}>
                             <td>"{quote.message}"</td>
                             <td>{quote.name}</td>
                             <td>{formatDate(quote.time)}</td>

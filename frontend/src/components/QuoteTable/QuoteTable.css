@@ -25,6 +25,10 @@
     background-size: 12px; 
 }
 
+.quote-table-column-title {
+    font-weight: normal;
+    color: #6f6e6e;
+}
 
 .filter-label {
     margin-right: 0.5em;
@@ -36,21 +40,14 @@ table {
 }
 
 th, td {
-    padding: 10px;
+    padding: 17px;
     text-align: left;
 }
 
-table, th, td {
-    border: 1px solid #ddd;
+.quote-table-row-data {
+    border-top: 1px solid #ddd;
   }
 
-.quote-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-.quote-table th {
-    background-color: #f2f2f2;
-}
 
 .quote-table tr:hover {
     background-color: #f1f1f1;
