@@ -11,8 +11,12 @@ function App() {
 		<div className="App">
 			<Header />
 			<div className="card-container">
-				<div className="card submit-quote-card">
-					<h1 className="card-title">Submit a quote</h1>
+
+				<div className="card submit-quote-card">				
+					<h1 className="card-title">Enter a Quote</h1>
+					<div className="card-description">
+						<p>"Words are, of course, the most powerful drug used by mankind." - Rudyard Kipling</p>
+					</div>
 					<QuoteForm quotes={quotes} setQuotes={setQuotes} />
 				</div>
 				<div className="card quote-card">

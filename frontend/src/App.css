@@ -1,12 +1,12 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif
 }
 
 .card-container {
     display: flex; 
     align-items: flex-start;
+    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -15,13 +15,21 @@
     padding-bottom: 10px;
 }
 
+.card-description {
+    padding-top: 5px;
+    padding-bottom: 18px;
+}
+
 .card {
+    display: flex;
+    flex-direction: column;
     background: #fff;
     border-radius: 10px; 
     padding: 40px;
     margin: 20px;
     border: 1px solid #d1d0d0;
     box-sizing: border-box;
+    height: 83vh;
 }
 
 .card:first-child {
@@ -35,6 +43,7 @@
 .submit-quote-card {
     flex: 1;
     max-width: 33.3333%; 
+
 }
 
 .quote-card {
