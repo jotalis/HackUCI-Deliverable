@@ -1,6 +1,17 @@
+import { useState, useEffect } from "react";
 import "./App.css";
 
 function App() {
+	
+	const [ageFilter, setAgeFilter] = useState("all");
+
+	const ageFilterChange = (event) => {
+		console.log(event.target.value);
+		setAgeFilter(event.target.value);
+	}
+
+
+
 	return (
 		<div className="App">
 			{/* TODO: include an icon for the quote book */}
@@ -18,7 +29,7 @@ function App() {
 
 			<h2>Previous Quotes</h2>
 			{/* TODO: Display the actual quotes from the database */}
-			<select id="input-age" name="age filter">
+			<select id="input-age" selected="all" name="age filter" value={ageFilter} onChange={ageFilterChange}>
 				<option value="all">All</option>
 				<option value="day">1 day</option>
 				<option value="week">1 week</option>
